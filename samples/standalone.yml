@@ -84,6 +84,20 @@ hooks:
         cmd:
           - mkdir -p plugins
           - git clone https://github.com/discourse/docker_manager.git
+    - exec:
+        cd: $home
+        cmd:
+          - git remote remove origin
+          - git config --remove-section branch.master
+          - git config --remove-section branch.tests-passed
+          - git remote add origin https://github.com/nhtera/discourse.git
+          - git fetch
+          - git remote set-branches --add origin tests-passed
+          - git remote set-branches --add origin master
+          - git branch -u origin/master master
+          - git branch -u origin/tests-passed tests-passed
+          - git reset --hard origin/master
+          - git reset --hard origin/tests-passed
 
 ## Remember, this is YAML syntax - you can only have one block with a name
 run:
