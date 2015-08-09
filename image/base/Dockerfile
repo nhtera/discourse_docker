@@ -88,7 +88,7 @@ RUN add-apt-repository ppa:ubuntu-toolchain-r/test &&\
     gem update --system &&\
     gem install bundler &&\
     rm -rf /usr/local/share/ri/2.0.0/system &&\
-    cd / && git clone https://github.com/SamSaffron/pups.git
+    cd / && git clone https://github.com/nhtera/pups.git
 
 # clean up for docker squash
 RUN rm -fr /usr/share/man && rm -fr /usr/share/doc && mkdir -p /etc/runit/3.d

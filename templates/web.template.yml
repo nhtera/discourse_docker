@@ -15,7 +15,8 @@ env:
 
 params:
   # SSH key is required for remote access into the container
-  version: tests-passed
+  #version: tests-passed
+  version: master
 
   home: /var/www/discourse
   upload_size: 10m
@@ -76,6 +77,13 @@ run:
      contents: |
        #!/bin/bash
        sv stop unicorn
+
+   - exec:
+      cd: /var/www
+      hook: code
+      cmd:
+        - chown -R discourse:www-data /var/www
+        - mv discourse discourse.old && git clone https://github.com/nhtera/discourse.git
 
   - exec:
       cd: $home
