@@ -2,7 +2,7 @@
 
 - [Docker](https://docker.com/) is an open source project to pack, ship and run any Linux application in a lighter weight, faster container than a traditional virtual machine.
 
-- Docker makes it much easier to deploy [a Discourse forum](https://github.com/discourse/discourse) on your servers and keep it updated. For background, see [Sam's blog post](http://samsaffron.com/archive/2013/11/07/discourse-in-a-docker-container).
+- Docker makes it much easier to deploy [a Discourse forum](https://github.com/nhtera/discourse) on your servers and keep it updated. For background, see [Sam's blog post](http://samsaffron.com/archive/2013/11/07/discourse-in-a-docker-container).
 
 - The templates and base image configure Discourse with the Discourse team's recommended optimal defaults.
 
@@ -10,7 +10,7 @@
 
 The simplest way to get started is via the **standalone** template, which can be installed in 30 minutes or less. For detailed install instructions, see
 
-https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md
+https://github.com/nhtera/discourse/blob/master/docs/INSTALL-cloud.md
 
 ### Directory Structure
 
